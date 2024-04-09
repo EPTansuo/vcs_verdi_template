@@ -1,12 +1,11 @@
 TOP_NMAE=i2c_tb
-WAVE=i2c.fsdb
-
-PLATFORM=LINUX64
 
 BUILD_DIR = ./build
 VSRC_DIR = ./vsrc
 TB_DIR = ./tb
 INC_FLAGS = +incdir+$(VSRC_DIR)
+
+PLATFORM=LINUX64
 
 VCS_LOG=$(BUILD_DIR)/vcs.log
 SIM_LOG=$(BUILD_DIR)/sim.log
