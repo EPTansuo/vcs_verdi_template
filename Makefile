@@ -34,7 +34,8 @@ $(BIN): $(VSRCS)
 		-Mdir=$(CSRC_DIR) -o $(BIN)
 
 sim: $(BIN)
-	cd $(BUILD_DIR) && ./$(shell basename $^) -verdi #-l $(SIM_LOG)
+	cd $(BUILD_DIR) && ./$(shell basename $^) -verdi\
+		 -l $(abspath $(SIM_LOG))
 
 all: default
 
