@@ -17,6 +17,7 @@ VCS_FLAGS = -full64 -notice -kdb -lca -debug_acc+all \
 		+dmptf +warn=all +libext+.v+v2k+acc
 #-R +fsdb+autoflush
 
+
 VSRCS = $(shell find $(abspath $(VSRC_DIR)) -name "*.v")
 VSRCS += $(shell find $(abspath $(TB_DIR)) -name "*.v")
 
