@@ -19,13 +19,17 @@ VCS_FLAGS = -full64 -notice -kdb -lca -debug_acc+all \
 
 VSRCS = $(shell find $(abspath $(VSRC_DIR)) -name "*.v")
 VSRCS += $(shell find $(abspath $(TB_DIR)) -name "*.v")
-$(shell mkdir -p $(BUILD_DIR))
 
 
 default: $(BIN)
 
-$(BIN): $(VSRCS)
+
+$(FILE_LIST_F): $(VSRCS)
+	$(shell mkdir -p $(BUILD_DIR))
 	$(shell echo $(VSRCS) > $(FILE_LIST_F))
+	
+
+$(BIN): $(FILE_LIST_F)
 	vcs	$(INC_FLAGS) -l $(VCS_LOG) $(VCS_FLAGS)\
 		-P $(VERDI_HOME)/share/PLI/VCS/$(PLATFORM)/novas.tab\
 		$(VERDI_HOME)/share/PLI/VCS/$(PLATFORM)/pli.a\
@@ -40,7 +44,7 @@ all: default
 
 
 clean:
-	-rm -rf ./build/* 
+	-rm -rf $(BUILD_DIR) 
 
 
 
