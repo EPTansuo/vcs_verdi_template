@@ -1,9 +1,8 @@
 # VCS+Verdi 工程模板
 
 ## 使用方法
-修改`Makefile`文件，将`TOP_NAME`设置为自己的顶层实例模块名称。
 
-`tb/` 存放`testbench`文件，`vsrc/`存放`Verilog`代码。
+`tb/` 存放`testbench`文件，`vsrc/`存放`Verilog`代码。若想修改默认的工程目录结构，请修改`Makefile`文件。
 
 ## 仅分析和编译，不查看波形
 ```
