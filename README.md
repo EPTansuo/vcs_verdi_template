@@ -1,34 +1,34 @@
-# VCS+Verdi ����ģ��
+# VCS+Verdi 工程模板
 
-## ʹ�÷���
+## 使用方法
 
-`tb/` ���`testbench`�ļ���`vsrc/`���`Verilog`���롣�����޸�Ĭ�ϵĹ���Ŀ¼�ṹ�����޸�`Makefile`�ļ���
+`tb/` 存放`testbench`文件，`vsrc/`存放`Verilog`代码。若想修改默认的工程目录结构，请修改`Makefile`文件。
 
-## �������ͱ��룬���鿴����
+## 仅分析和编译，不查看波形
 ```
 make 
 ```
-��
+或
 ```
 make all
 ```
 
-## ���롢���沢����verdi��
+## 编译、仿真并启动verdi：
 ```
 make sim
 ```
 
-## ɾ���������ļ�����־�ļ�
+## 删除构建的文件和日志文件
 ```
 make clean
 ```
 
-## ���ʹ�ã����·����ͱ���
+## 组合使用：重新分析和编译
 ```
 make clean all
 ```
 
-## ���ʹ�ã����·��������롢���沢����verdi
+## 组合使用：重新分析、编译、仿真并启动verdi
 ```
 make clean sim
 ```
