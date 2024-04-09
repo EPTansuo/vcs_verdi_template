@@ -26,7 +26,9 @@ default: $(BIN)
 
 $(FILE_LIST_F): $(VSRCS)
 	$(shell mkdir -p $(BUILD_DIR))
-	$(shell echo $(VSRCS) > $(FILE_LIST_F))
+	$(shell printf '%s\n' $(VSRCS) > $(FILE_LIST_F))
+
+
 	
 
 $(BIN): $(FILE_LIST_F)
