@@ -1,5 +1,3 @@
-TOP_NMAE=i2c_tb
-
 BUILD_DIR = ./build
 VSRC_DIR = ./vsrc
 TB_DIR = ./tb
@@ -11,7 +9,7 @@ VCS_LOG=$(BUILD_DIR)/vcs.log
 SIM_LOG=$(BUILD_DIR)/sim.log
 FILE_LIST_F=./build/file.list.f
 CSRC_DIR=$(BUILD_DIR)/csrc
-BIN=$(BUILD_DIR)/$(TOP_NMAE)
+BIN=$(BUILD_DIR)/simv
 
 VCS_FLAGS = -full64 -notice -kdb -lca -debug_acc+all \
 		+dmptf +warn=all +libext+.v+v2k+acc
