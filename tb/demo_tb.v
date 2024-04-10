@@ -4,7 +4,7 @@ module demo_tb();
 
     //生成波形文件
     initial begin
-        $dumpfile("wave.c");
+        $dumpfile("wave.vcd");
         //	$fsdbDumpfile("wave.fsdb");
         $dumpvars(0, demo_tb);
         //$fsdbDumpvars();
